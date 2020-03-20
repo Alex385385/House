@@ -28,6 +28,19 @@ public class Main extends Application {
         Rectangle door = new Rectangle(340, 330, 80, 150);
         door.setFill(Color.web("#910F00"));
 
+        roof.setOnMouseEntered(event -> {
+            roof.setFill(Color.web("#830000"));
+        });
+
+        door.setOnMouseExited(event -> {
+            door.setScaleX(0.1);
+        });
+
+        window1.setOnMouseClicked(event -> {
+            window1.setTranslateX(150);
+            window1.setTranslateY(-80);
+        });
+
 
         Pane pane = new Pane(roof, house, door, window1, window2);
 
